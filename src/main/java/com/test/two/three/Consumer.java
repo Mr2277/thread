@@ -9,6 +9,7 @@ public class Consumer {
         this.list=list;
         this.object=o;
     }
+
     public void Consume() throws InterruptedException {
         synchronized (object) {
             while (true) {
