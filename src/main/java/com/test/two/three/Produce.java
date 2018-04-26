@@ -4,24 +4,25 @@ import java.util.ArrayList;
 
 public class Produce {
     private ArrayList<Integer> list;
-    private Object lockproduce;
+    private Object lock;
 
-    public Produce(ArrayList<Integer> list) {
+    public Produce(ArrayList<Integer> list,Object lock) {
+        this.lock=lock;
         this.list = list;
     }
-
-    public void produce() {
-        synchronized (lockproduce) {
-            while (true) {
-                if (list.isEmpty()) {
+    public void produce() throws InterruptedException {
+        synchronized (lock) {
+             while (true){
+                 if(list.isEmpty()){
                      for(int i=1;i<=10;i++){
+                         System.out.println("生产者 "+i);
                          list.add(i);
                      }
-                     lockproduce.notifyAll();
+                     lock.notifyAll();
+                     }
+                 lock.wait();
 
-                }
-
-            }
+             }
         }
     }
 }
