@@ -6,11 +6,10 @@ public class test {
         this.object=o;
     }
     public void test() throws InterruptedException {
-        while (true)
-        synchronized (object){
-            System.out.println(Thread.currentThread().getName());
-            object.notify();
-            object.wait();
+        while (true){
+            synchronized (object){
+
+            }
         }
     }
 }
