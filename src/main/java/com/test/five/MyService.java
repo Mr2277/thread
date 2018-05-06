@@ -14,4 +14,9 @@ public class MyService {
         lock.unlock();
         System.out.println("锁释放");
     }
+    public void notifyMethod(){
+        lock.lock();
+        condition.signal();
+        lock.unlock();
+    }
 }
