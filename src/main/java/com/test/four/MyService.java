@@ -7,7 +7,7 @@ public class MyService {
     private Lock lock=new ReentrantLock();
     public void testMethod(){
         lock.lock();
-        for(int i=0;i<5;i++){
+        for(int i=0;i<500000000;i++){
             System.out.println(i+Thread.currentThread().getName());
         }
         lock.unlock();
