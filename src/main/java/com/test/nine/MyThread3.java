@@ -1,8 +1,8 @@
 package com.test.nine;
 
-public class MyThread1 extends Thread {
+public class MyThread3 extends Thread {
     private Service service;
-    MyThread1(Service service){
+    MyThread3(Service service){
         this.service=service;
     }
 

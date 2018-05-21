@@ -9,7 +9,16 @@ public class Service {
 
             System.out.println("获得读锁：" + Thread.currentThread().getName()
                     + " " + System.currentTimeMillis());
-        Thread.sleep(1000000);
         lock.writeLock().unlock();
     }
+   public void read() throws InterruptedException {
+        lock.readLock().lock();
+
+       System.out.println("获得读锁：read" + Thread.currentThread().getName()
+               + " " + System.currentTimeMillis());
+       Thread.sleep(1000000);
+
+       lock.readLock().unlock();
+
+   }
 }
