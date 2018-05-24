@@ -15,7 +15,7 @@ public class Accept {
         Destination destination;
         // 消费者，消息接收者
         MessageConsumer consumer;
-        connectionFactory = new ActiveMQConnectionFactory("admin", "admin", "tcp://192.168.3.159:61616");
+        connectionFactory = new ActiveMQConnectionFactory("admin", "admin", "tcp://127.0.0.1:61616");
         try {
             // 构造从工厂得到连接对象
             connection = connectionFactory.createConnection();

@@ -11,7 +11,7 @@ public class Send {
         Session session;
         Destination destination;
         MessageProducer producer;
-        connectionFactory = new ActiveMQConnectionFactory("admin", "admin", "tcp://192.168.3.159:61616");
+        connectionFactory = new ActiveMQConnectionFactory("admin", "admin", "tcp://127.0.0.1:61616");
         try {
             connection = connectionFactory.createConnection();
             connection.start();
