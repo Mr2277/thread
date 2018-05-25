@@ -58,6 +58,7 @@ public class Sender {
             // 发送消息到目的地方
             System.out.println("发送消息：" + "ActiveMq 发送的消息" + i);
             producer.send(message);
+
         }
     }
 }
