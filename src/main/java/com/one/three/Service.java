@@ -14,7 +14,6 @@ public class Service {
        condition.await();
        System.out.println("end");
        reentrantLock.unlock();
-
-   }
+       }
 
 }
