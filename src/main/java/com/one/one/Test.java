@@ -1,4 +1,8 @@
 package com.one.one;
+
+import java.util.ArrayList;
+import java.util.List;
+
 class a{
     private byte aByte[]=new byte[1024*1024];
 }
@@ -6,7 +10,7 @@ class b{
     private byte aByte[]=new byte[10*1024*1024];
 }
 class c{
-    private byte aByte[]=new byte[5*1024*1024];
+    private byte aByte[]=new byte[3*1024*1024];
 }
 public class Test {
     public static void main(String[] args){
@@ -36,9 +40,18 @@ public class Test {
        // new a();
         //new b();
         //new b();
+        /*
         for(int i=0;i<4;i++) {
            // new c();
          //   new c();
         }
+        */
+       // System.gc();
+       c c1=new c();
+        //System.gc();
+       c c2=new c();
+       c c3=new c();
+      //  a a1=new a();
+       // a a2=new a();
     }
 }
