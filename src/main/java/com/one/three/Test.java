@@ -31,6 +31,10 @@ public class Test {
 
         Test test3 = new Test();
         test3.cMethod();
+
         System.out.println(test3.cMethod());
+        int i = 5;
+        int j = 10;
+        System.out.println(i + ~j);
     }
 }
